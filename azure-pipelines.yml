@@ -27,6 +27,7 @@ steps:
     set -e
     az login --service-principal --username "$(APP_ID)" --password "$(PASSWORD)" --tenant "$(TENANT_ID)" 
     func settings add FUNCTIONS_WORKER_RUNTIME node
+    func extensions install
     func azure functionapp publish $(APP_NAME) --force
 
 
