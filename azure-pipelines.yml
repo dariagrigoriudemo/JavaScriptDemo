@@ -21,8 +21,9 @@ steps:
     command: install
 
 - script:
-    az login --service-principal --username "$APP_ID" --password "$PASSWORD" --tenant "$TENANT_ID" 
-    az account get-access-token --query "accessToken" --debug | func azure functionapp publish $APP_NAME
+    set -e
+    az login --service-principal --username "$(APP_ID)" --password "$(PASSWORD)" --tenant "$(TENANT_ID)" 
+    func azure functionapp publish $(APP_NAME)
 
 
     
