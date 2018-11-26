@@ -9,8 +9,7 @@ steps:
     sudo apt-get install -y apt-transport-https
     sudo apt-get update && sudo apt-get install -y azure-cli
     npm i -g azure-functions-core-tools --unsafe-perm true
-    
-steps:
+
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
