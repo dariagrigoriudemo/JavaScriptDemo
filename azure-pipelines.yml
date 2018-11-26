@@ -20,7 +20,7 @@ steps:
   inputs:
     command: install
 
-- script:
+- script: |
   echo "$APP_ID" "$PASSWORD" "$TENANT_ID"
   az login --service-principal --username "$APP_ID" --password "$PASSWORD" --tenant "$TENANT_ID"
   az account get-access-token --query "accessToken" | func azure functionapp publish $APP_NAME
