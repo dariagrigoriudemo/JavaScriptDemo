@@ -22,7 +22,7 @@ steps:
 
 - script:
     az login --service-principal --username "$APP_ID" --password "$PASSWORD" --tenant "$TENANT_ID" 
-    az account get-access-token --query "accessToken" | func azure functionapp publish $APP_NAME
+    az account get-access-token --query "accessToken" --debug | func azure functionapp publish $APP_NAME
 
 
     
