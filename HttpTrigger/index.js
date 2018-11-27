@@ -24,7 +24,7 @@ module.exports = async function (context, req) {
         else {
             context.res = {
                 // status: 200, /* Defaults to 200 */
-                body: "value is prime number : " + (isPrime(value))
+                body: "The value is prime number : " + (isPrime(value))
             };
         }
     }
