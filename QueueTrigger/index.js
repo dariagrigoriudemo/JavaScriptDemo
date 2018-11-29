@@ -18,7 +18,7 @@ module.exports = async function (context, myQueueItem) {
             context.log("value is not a number : " + (myQueueItem));
         } 
         else {
-            context.log("The test value is prime number : " + (isPrime(myQueueItem)));
+            context.log("The prime number test result is: " + (isPrime(myQueueItem)));
         }
     }
     else {
