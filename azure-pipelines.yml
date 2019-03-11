@@ -1,8 +1,8 @@
 variables:
 
-  azureSubscription: '{ARM ACCESS TOKEN NAME}'
+  azureSubscription: 'ARM Service Connection'
 
-  functionappName: '{NAME OF FUNCTIONAPP}'
+  functionappName: 'primedevopsebc-stage'
 
 
 
