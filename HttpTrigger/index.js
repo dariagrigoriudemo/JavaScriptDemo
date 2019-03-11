@@ -24,7 +24,7 @@ module.exports = async function (context, req) {
         else {
             context.res = {
                 // status: 200, /* Defaults to 200 */
-                body: "The prime number test result for ProDev All Hands is: " + (isPrime(value))
+                body: "The prime number test result is: " + (isPrime(value))
             };
         }
     }
