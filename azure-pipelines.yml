@@ -2,7 +2,7 @@ variables:
 
   azureSubscription: 'ARM Service Connection'
 
-  functionappName: 'primedevopsebc-stage'
+  functionappName: 'primedevopsebc'
 
 
 
@@ -47,11 +47,9 @@ steps:
 - task: AzureRmWebAppDeployment@4
 
   inputs:
-
     connectionType: 'AzureRM'
-
     azureSubscription: "$(azureSubscription)"
-
     appType: 'functionApp'
-
     webAppName: "$(functionappName)"
+    DeployToSlotFlag: true
+    slotName: Stage
