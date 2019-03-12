@@ -52,4 +52,4 @@ steps:
     appType: 'functionApp'
     webAppName: "$(functionappName)"
     DeployToSlotFlag: true
-    slotName: Stage
+    slotName: 'Stage'
