@@ -12,6 +12,7 @@ function isPrime(value) {
 }   
 
 module.exports = async function (context, req) {
+    const environment_name =  process.env['Environment'];
     context.log('JavaScript HTTP trigger function processed a request.');
     var value = (req.query.value || (req.body && req.body.value));
     if (value) {
@@ -24,7 +25,7 @@ module.exports = async function (context, req) {
         else {
             context.res = {
                 // status: 200, /* Defaults to 200 */
-                body: "The prime number test result is: " + (isPrime(value))
+                body: "The prime number test result for " + environment_name + " environment is: " + (isPrime(value))
             };
         }
     }
