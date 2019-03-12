@@ -10,7 +10,7 @@ pool:
 steps:
 
 - script: |
-    dotnet build
+    dotnet build bin
     npm install
     npm run build
 
