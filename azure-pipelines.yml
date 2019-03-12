@@ -1,16 +1,11 @@
 variables:
-
   azureSubscription: 'ARM Service Connection'
-
   functionappName: 'primedevopsebc'
-
-
+  slotName: 'Stage'
+  resourceGroupName: 'EBC-Demos'
 
 pool:
-
   vmImage: 'VS2017-Win2016'
-
-
 
 steps:
 
@@ -52,4 +47,5 @@ steps:
     appType: 'functionApp'
     webAppName: "$(functionappName)"
     deployToSlotOrASE: True
-    slotName: 'Stage'
+    slotName: "$(slotName)"
+    resourceGroupName: "$(resourceGroupName)"
