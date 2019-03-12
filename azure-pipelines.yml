@@ -10,13 +10,10 @@ pool:
 steps:
 
 - script: |
-
-    dotnet restore # comment out if not using extensions
-
-    dotnet build --output \'./bin/\' # comment out if not using extensions
-
+    echo "dotnet restore"
+    dotnet restore
+    dotnet build --output \'./bin/\'
     npm install
-
     npm run build
 
 - task: ArchiveFiles@2
