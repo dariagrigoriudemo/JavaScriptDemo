@@ -51,5 +51,5 @@ steps:
     azureSubscription: "$(azureSubscription)"
     appType: 'functionApp'
     webAppName: "$(functionappName)"
-    DeployToSlotFlag: true
+    deployToSlotOrASE: True
     slotName: 'Stage'
