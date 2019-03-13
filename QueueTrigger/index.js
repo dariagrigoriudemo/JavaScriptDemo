@@ -12,13 +12,14 @@ function isPrime(value) {
 }   
 
 module.exports = async function (context, myQueueItem) {
+    const environment_name =  process.env['Environment'];
     context.log('JavaScript queue trigger function processed work item', myQueueItem);
     if (myQueueItem) {
         if (isNaN(myQueueItem)) {
             context.log("value is not a number : " + (myQueueItem));
         } 
         else {
-            context.log("The prime number test result is: " + (isPrime(myQueueItem)));
+            context.log("The prime number test result for " + environment_name + " environment is: " + (isPrime(myQueueItem)));
         }
     }
     else {
